@@ -36,7 +36,8 @@ Set the value to "Offline" at "AppOffline.State" key entry in appSettings sectio
 
 web.config の appSettings セクションに、キー = "AppOffline.State" のエントリで値に "Offline" と設定します。
 
-example / 例:
+**example / 例:**
+
     <appSettings>
       <add key="AppOffline.State" value="Offline"/>
     <appSettings>
