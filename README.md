@@ -125,3 +125,20 @@ You can replace thease properties to your custom functions.
             AppOfflineModule.Filter.IsEnable = () => DateTime.UtcNow <= DateTime.Parse("Feb 18, 2013");
         }
     }
+
+**example for retrun HTTP status 503 instead of 404. / HTTPステータス 404 の代わりに 503 を返す例**
+
+    // Global.asax.cs
+    public class MyApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            ...
+            AppOfflineModule.Filter.Action = (app) =>
+            {
+                app.Response.StatusCode = 503;
+                app.Response.End();
+            };
+        }
+    }
+

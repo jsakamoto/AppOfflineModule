@@ -20,7 +20,13 @@ namespace SampleWebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            // Example) AppOfflineModule.Filter.IsEnable = () => DateTime.UtcNow <= DateTime.Parse("Feb 18, 2013");
+            // Example 1) AppOfflineModule.Filter.IsEnable = () => DateTime.UtcNow <= DateTime.Parse("Feb 18, 2013");
+            // Example 2) Return 503 instead of 404.
+            //AppOfflineModule.Filter.Action = (app) =>
+            //{
+            //    app.Response.StatusCode = 503;
+            //    app.Response.End();
+            //};
         }
     }
 }
