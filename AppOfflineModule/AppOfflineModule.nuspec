@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>J.Sakamoto</authors>
+    <owners>J.Sakamoto</owners>
+    <licenseUrl>http://www.microsoft.com/en-us/openness/licenses.aspx#MPL</licenseUrl>
+    <projectUrl>https://github.com/jsakamoto/appofflinemodule</projectUrl>
+    <!--
+    <iconUrl/>
+    -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>
+      Respond HTTP 404 at all of any requests, except special users.
+    </summary>
+    <description>
+      This module allows you to always respond HTTP404 at any requests except special users.
+      The behavior of this module looks like "App_Offline.htm" but controled by appSettings section in web.config,
+      and provide login form appeared only "back door URL" access.
+    </description>
+    <releaseNotes>
+      <![CDATA[
+      ]]>
+    </releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="web.config.transform" target="Content\web.config.transform" />
+  </files>
+</package>
