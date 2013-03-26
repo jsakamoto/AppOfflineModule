@@ -114,6 +114,8 @@ You can replace thease properties to your custom functions.
 - AppOfflineModule.Filter.IsAllowPassThrough: 現在のユーザーが "Offline" モードであっても通常どおりのアクセスが可能かどうかを返す関数を取得または設定します。
 - AppOfflineModule.Filter.Action: "Offline" モード時に HTTP クライアントへの応答を行うアクションを取得または設定します。
 
+### Example 1 / カスタマイズ例 1
+
 **example for AppOffline enabled before Feb 18 2013(UTC). / (世界標準時)2013年2月18日以前はオフラインとする例**
 
     // Global.asax.cs
@@ -125,6 +127,8 @@ You can replace thease properties to your custom functions.
             AppOfflineModule.Filter.IsEnable = () => DateTime.UtcNow <= DateTime.Parse("Feb 18, 2013");
         }
     }
+
+### Example 2 / カスタマイズ例 2
 
 **example for retrun HTTP status 503 instead of 404. / HTTPステータス 404 の代わりに 503 を返す例**
 
